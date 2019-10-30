@@ -14,9 +14,20 @@ class SidebarComponent extends React.Component {
     };
   }
   render() {
+
+    const { notes, classes, selectedNoteIndex } = this.props;
+
     return(
-      <div>hello from sidebar</div>
+      <div className={classes.sidebarContainer}>
+        <Button 
+          onClick={this.newNoteBtnClick}
+          className={classes.newNoteBtn}
+        >New Note </Button>
+      </div>
     )
+  }
+  newNoteBtnClick =() => {
+    console.log('New Note')
   }
 }
 export default withStyles(styles)(SidebarComponent)
