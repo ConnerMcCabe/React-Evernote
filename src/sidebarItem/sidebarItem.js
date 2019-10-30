@@ -13,7 +13,7 @@ class SidebarItemComponent extends React.Component {
   render() {
 
     return(
-      <div>hello from the sidebar item</div>
+      <div></div>
     )
   }
 }
