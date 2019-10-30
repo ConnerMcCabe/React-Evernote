@@ -15,7 +15,24 @@ class EditorComponent extends React.Component {
     };
   }
   render() {
-    return(<h1>Hello from the editor</h1>)
+
+    const { classes } = this.props;
+
+    return(
+      <div className={classes.editorContainer}>
+        <ReactQuill 
+          value={this.state.text} 
+          onChange={this.updateBody}
+        />
+      </div>
+    )
   }
+  updateBody = async (val) => {
+    await this.setState({ text : val });
+    this.update();
+  };
+  update = debounce(() => {
+    console.log('UPDATING DATABASE');
+  }, 2000);
 }
 export default withStyles(styles)(EditorComponent)
