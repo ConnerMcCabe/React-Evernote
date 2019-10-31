@@ -17,18 +17,18 @@ class EditorComponent extends React.Component {
 
   componentDidMount = () => {
     this.setState({
-      text: this.props.selecteNote.body,
-      title: this.props.selecteNote.title,
-      id: this.props.selecteNote.id
+      text: this.props.selectedNote.body,
+      title: this.props.selectedNote.title,
+      id: this.props.selectedNote.id
     });
   }
 
   componentDidUpdate = () => {
-    if(this.props.selecteNote.id !== this.state.id) {
+    if(this.props.selectedNote.id !== this.state.id) {
       this.setState({
-        text: this.props.selecteNote.body,
-        title: this.props.selecteNote.title,
-        id: this.props.selecteNote.id
+        text: this.props.selectedNote.body,
+        title: this.props.selectedNote.title,
+        id: this.props.selectedNote.id
       });
     }
   }
