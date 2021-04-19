@@ -23,7 +23,6 @@ class SidebarComponent extends React.Component {
           <Button 
             onClick={this.newNoteBtnClick}
             className={classes.newNoteBtn}
-           
           >{this.state.addingNote ? 'Cancel' : 'New Note'} 
           </Button>
           {
@@ -46,10 +45,10 @@ class SidebarComponent extends React.Component {
                 <div key={_index}>
                   <SidebarItemComponent
                     _note={_note}
-                     _index={_index}
-                     selectedNoteIndex={selectedNoteIndex}
-                     selectNote={this.selectNote}
-                     deleteNote={this.deleteNote}
+                    _index={_index}
+                    selectedNoteIndex={selectedNoteIndex}
+                    selectNote={this.selectNote}
+                    deleteNote={this.deleteNote}
                   />
                   <Divider />
                 </div>
